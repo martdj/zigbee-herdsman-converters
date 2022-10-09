@@ -107,4 +107,14 @@ module.exports = [
             device.skipDefaultResponse = true;
         },
     },
+    {
+        zigbeeModel: ['Z102LG03-1'],
+        model: 'Z102LG03',
+        vendor: 'eWeLink',
+        description: 'eWeLink RGBCW Smart LED Bulb',
+        extend: extend.light_onoff_brightness_colortemp_color({colorTempRange: [153, 454]}),
+        endpoint: (device) => {
+            return {'default': 2};
+        },
+    },
 ];
